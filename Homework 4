@@ -18,3 +18,27 @@ plot(t,v,'k')
 show()
 
 #problem4
+from pylab import *
+from math import *
+N_A=[]
+N_B=[]
+t=[0]
+dt=0.1
+tau_A=float(raw_input("please enter tau_A:"))
+tau_B=float(raw_input("please enter tau_B:"))
+end_time=float(raw_input("please enter end_time:"))
+N_A.append(float(raw_input("please enter the initial N_A:")))
+N_B.append(float(raw_input("please enter the initial N_B:")))
+for i in range(int(end_time/dt)):
+        tmp_A=N_A[i]-(N_A[i]/tau_A)*dt
+        tmp_B=N_B[i]+(N_A[i]/tau_A-N_B[i]/tau_B)*dt
+        N_A.append(tmp_A)
+        N_B.append(tmp_B)
+        t.append(dt*(i+1))
+        print t[-1],N_A[-1],N_B[-1]
+xlabel('time')
+ylabel('N')
+plot(t,N_A,'k')
+plot(t,N_B,'*')
+show()
+
