@@ -1,5 +1,5 @@
-**Homework 4**
-*problem 1*
+## Homework 4
+#  problem 1
 from pylab import *
 import pickle
 v=[0] 
