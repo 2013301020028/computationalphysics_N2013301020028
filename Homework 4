@@ -1,5 +1,5 @@
-##Homework 4
-#problem 1
+# problem1
+
 from pylab import *
 import pickle
 v=[0] 
@@ -16,3 +16,5 @@ for i in range(int(end_time/dt)):
         print t[-1],v[-1]
 plot(t,v,'k')
 show()
+
+#problem4
